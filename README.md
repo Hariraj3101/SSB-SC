@@ -91,7 +91,9 @@ xgrid;
 ```
 
 OUTPUT WAVEFORM
-<img width="1917" height="1067" alt="image" src="https://github.com/user-attachments/assets/c7909898-e908-4bdd-935c-d3bb4bef815f" />
+
+<img width="1716" height="905" alt="image" src="https://github.com/user-attachments/assets/3cb6d540-d054-4051-801d-ce44d9fea0e1" />
+
 
 TABULATION
 
