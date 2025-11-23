@@ -52,14 +52,50 @@ Model Waveform
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 Program
+```
+ac=31.6; 
+Am=15.8; 
+fc=4070;
+fm=407;
+fs=25000; 
+t=0:1/fs:2/fm; 
+wc=2*3.14*fc;
+wm=2*3.14*fm;
+e1=(Am*sin(wm*t));
+subplot(4,1,1);
+plot(t,e1); 
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+e2=(ac*sin(wc*t)); 
+subplot(4,1,2); 
+plot(t,e2);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+sbsc1=(Am/2.*cos(wc*t-wm*t))-(Am/2.*cos(wc*t+wm*t));
+sbsc2=(Am/2.*cos(wc*t-wm*t))+(Am/2.*cos(wc*t+wm*t)); 
+e3=(sbsc2)+(sbsc1); 
+subplot(4,1,3);
+plot(t,e3);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (LSB)");
+e4=(sbsc2)-(sbsc1); 
+subplot(4,1,4); 
+plot(t,e4);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (USB)");
+xgrid;
+```
 
 OUTPUT WAVEFORM
+<img width="1917" height="1067" alt="image" src="https://github.com/user-attachments/assets/c7909898-e908-4bdd-935c-d3bb4bef815f" />
 
 TABULATION
 
-
-
-
+<img width="1020" height="1600" alt="image" src="https://github.com/user-attachments/assets/87cf154b-c24a-4c33-9e33-a597cd2e5ecc" />
 
 
 
@@ -67,7 +103,8 @@ TABULATION
 
 RESULT:
 
-Thus, the SSB-SC-AM Modulation and Demodulation is experimentally done and the output is verified.
+<img width="1600" height="486" alt="image" src="https://github.com/user-attachments/assets/d8eb0673-5939-472c-8997-83fe2b86dfb4" />
+
 
 
 
